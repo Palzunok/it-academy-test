@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let menRetirementAge = 60;
+            let womanRetirementAge = 55;
+
+            let name = prompt('Введите вашу фамилию, имя, отчество', '');
+            let age = prompt('Введите ваш возраст', '');
+            let isMan = confirm('Вы мужчина?');
+
+            let daysAge = 365 * age + Math.floor(age/4);
+
+            isRetirement = isMan ? (age >= menRetirementAge ? true : false) : (age >= womenRetirementAge ? true : false); 
+
+            let questionnaire = 'ФИО: ' + name 
+                    + '\nвозраст, лет: ' + age 
+                    + '\nвозраст, дней: ' + daysAge 
+                    + '\nпол: ' + (isMan ? 'мужской' : 'женский')
+                    + '\nпенсионный возраст: ' + (isRetirement ? 'Да' : 'Нет');
+
+            alert(questionnaire);
+        </script>
+    </body>
+</html>

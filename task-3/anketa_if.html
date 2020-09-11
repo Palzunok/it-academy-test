@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let menRetirementAge = 60;
+            let womanRetirementAge = 55;
+            let isRetirement = 'Нет'
+
+            let name = prompt('Введите вашу фамилию, имя, отчество', '');
+            let age = prompt('Введите ваш возраст', '');
+            let isMan = confirm('Вы мужчина?');
+
+            let daysAge = 365 * age + Math.floor(age/4);
+
+            if (isMan) {
+                gender = 'мужской';
+            } else {
+                gender = 'женский';
+            }
+
+            if (isMan) {
+                if (age >= menRetirementAge) {
+                    isRetirement = 'Да'
+                } 
+            } else {
+                if (age >= womanRetirementAge) {
+                    isRetirement = 'Да'
+                }
+            }
+
+            let questionnaire = 'ФИО: ' + name 
+                    + '\nвозраст, лет: ' + age 
+                    + '\nвозраст, дней: ' + daysAge 
+                    + '\nпол: ' + gender
+                    + '\nпенсионный возраст: ' + isRetirement;
+
+            alert(questionnaire);
+        </script>
+    </body>
+</html>
